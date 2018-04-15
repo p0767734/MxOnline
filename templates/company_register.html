@@ -1,0 +1,255 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
+<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/TouchSlide.1.1.js ' %}"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--头部start-->
+<div class="header">
+  <ul class="clearfix">
+		<li class="logo"><a href="##" title=""><img src="{% static 'images/logo.png ' %}" alt="" /></a></li>
+		<li class="menus"><a href="##" title=""><img src="{% static 'images/more.png' %}" alt="" /></a></li>
+		<li class="langues"><em>EN</em></li>
+	</ul>
+</div>
+<!--头部end-->
+
+<!--幻灯片start-->
+<div class="banner" id="demo01">
+  <div class="bd">
+    <ul>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="saerch">
+		<select>
+			<option>长沙</option>
+		</select>
+		<input type="text" value="" placeholder="手机号码" />
+		<input type="button" value="立即代账" />
+	</div>
+</div>
+<script>
+  TouchSlide({ slideCell:"#demo01", titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop"});
+</script>
+<!--幻灯片start-->
+
+<!--注册start-->
+<div class="resiger_form">
+	<h2>免费核名</h2>
+  <ul>
+		<li><input type="text" value="" placeholder="请输入公司名称" /></li>
+		<li><input type="text" value="" placeholder="请输入您的电话号码" /></li>
+		<li><button>马上核名</button></li>
+	</ul>
+</div>
+<!--注册end-->
+
+<!--流程start-->
+<div class="cs_main">
+  <ul class="title">
+		<h2>企业0元代办注册  注册流程早看早知道</h2>
+		<p>注册的是公司  领先的是人生</p>
+	</ul>
+	<ul class="images">
+	  <img src="{% static 'images/img_11.jpg' %}" alt="" />
+	</ul>
+</div>
+<!--流程end-->
+
+<!--所需材料start-->
+<div class="cs_main rlzy gszc">
+  <ul class="title">
+		<h2>公司注册需要准备的材料</h2>
+	</ul>
+	<ul class="list">
+		<p><i>公司名称：</i>长沙/湖南+字号+行业描述+有限公司；长沙开头的，地域可以放在行业后面，如：盖谱+数据服务+（长沙）+有限公司。</p>
+		<p><i>注册资本情况：</i>湖南开头的注册资金在200万元以上，长沙的无要求。</p>
+		<p><i>法人、所有股东：</i>身份证号码及联系方式。</p>
+		<p><i>企业经营范围信息：</i>提供准确范围或样板。</p>
+		<p><i>注册地址证明材料：</i>房产证（或无产权证明、购房合同）、房东身份证明（无地址则不需要）。</p>
+	</ul>
+</div>
+<!--所需材料end-->
+
+<!--注册成功start-->
+<div class="resiger_success">
+	<h2>注册成功后会得到的材料</h2>
+	<ul class="clearfix">
+	  <li>
+	    <img src="{% static 'images/img_05.png' %}" alt="" />
+			<h4>营业执照（正、副本)</h4>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_06.png' %}" alt="" />
+			<h4>公司印章</h4>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_07.png' %}" alt="" />
+			<h4>公司章程</h4>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_08.png' %}" alt="" />
+			<h4>股东会决议</h4>
+		</li>
+	</ul>
+	<p>财务不懂？税务不了解？<br/>我们帮您免去烦恼</p>
+</div>
+<!--注册成功end-->
+
+<!--图片位start-->
+<div class="p_img"><a href="##" title=""><img src="{% static 'images/img_08.jpg' %}" alt="" /></a></div>
+<!--图片位end-->
+
+<!--财务基础服务start-->
+<div class="cfjc_service cfjc_service01">
+	<b>财务基础服务</b>
+	<ul>
+		<p>整理原始凭证、记录记账凭证</p>
+		<p>财税专家审核</p>
+		<p>财务管理咨询建议</p>
+		<p>每月纳税申报</p>
+		<p>税务申报表及时推送</p>
+		<p>出具财务报表</p>
+		<p>日常基本财务、税务咨询</p>
+		<p>月度装订凭证</p>
+		<p>年末装订账簿</p>
+		<p>财税风险预警</p>
+	</ul>
+	<b>增值服务免费送</b>
+	<ul>
+		<p>企业工商年检市场价：500元/年</p>
+		<p>国地税报道市场价：500元/次</p>
+		<p>年度企业所得税汇算清缴市场价：500元/年</p>
+		<p>核定残保金</p>
+		<p>法人一证通</p>
+		<p>免费上门服务</p>
+		<p>一对一五星级服务</p>
+	</ul>
+</div>
+<!--财务基础服务end-->
+
+<!--为什么选盖普start-->
+<div class="gp_resion">
+	<h2>为什么选盖谱？</h2>
+	<ul class="clearfix">
+	  <li>
+	    <img src="{% static 'images/img_01.png' %}" alt="" />
+			<b>专业资深团队</b>
+			<p>盖谱数据拥有资深会计师56名，服务团队30名公司总员工120于人，公司实力强大值得信赖</p>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_02.png' %}" alt="" />
+			<b>收费价格透明合理</b>
+			<p>盖谱数据所有收费项目都透明合理，绝无隐形收费、乱收费等行为</p>
+		</li>
+	</ul>
+	<ul class="clearfix">
+	  <li>
+	    <img src="{% static 'images/img_03.png' %}" alt="" />
+			<b>服务不满意可推全款</b>
+			<p>我们的宗旨是全心全意为客户解决问题，让客户省心、放心</p>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_04.png' %}" alt="" />
+			<b>提供企业一站式服务</b>
+			<p>专业服务企业14年，企业问题我们一站式解决</p>
+		</li>
+	</ul>
+</div>
+<!--为什么选盖普end-->
+
+<!--分类start-->
+<div class="type type01">
+	<b>没错！这些我们都能做</b>
+  <ul class="clearfix">
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_01.jpg' %}" alt="" />
+				<h4>注册服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_02.jpg' %}" alt="" />
+				<h4>财税服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_03.jpg' %}" alt="" />
+				<h4>人力资源</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_04.jpg' %}" alt="" />
+				<h4>知识产权</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_05.jpg' %}" alt="" />
+				<h4>海外业务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_06.jpg' %}" alt="" />
+				<h4>审计服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_07.jpg' %}" alt="" />
+				<h4>增值服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_08.jpg' %}" alt="" />
+				<h4>云系统</h4>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--分类end-->
+
+<!--底部start-->
+<div class="footer footer01">
+  <img src="{% static 'images/logo.png' %}" alt="" />
+	<p>客户热线：400 000 000</p>
+</div>
+<!--底部end-->
+
+<div class="f_nav">
+  <a href="##" title="">
+		<i class="f_01"></i>
+		<p>首页</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_02"></i>
+		<p>合伙人计划</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_03"></i>
+		<p>客服</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_04"></i>
+		<p>我的</p>
+	</a>
+</div>
+</body>
+</html>

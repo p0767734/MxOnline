@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block banner %}
+
+<body>
+
+
+<div class="header-bar">
+  <h1>个人信息</h1>
+</div>
+<div class="personal-information">
+
+  <div class="item">
+    <div class="hd">用户名</div>
+    <div class="bd">{{ user.email }}</div>
+  </div>
+  <div class="item">
+    <div class="hd">邮箱</div>
+    <div class="bd">{{ user.email }}</div>
+  </div>
+
+
+  <div class="item-list mt5">
+    <div class="nor">
+      <div class="hd">
+        我的消息
+      </div>
+      <div class="bd">
+        <i class="iconfont icon-xiala2"></i>
+      </div>
+    </div>
+    <div class="list">
+      <ul>
+      {% for message in all_message %}
+         <li><a href="#">{{ message.message }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="item-list mt5">
+    <div class="nor">
+      <div class="hd">
+        我的私人客服
+      </div>
+      <div class="bd">
+        <i class="iconfont icon-xiala2"></i>
+      </div>
+    </div>
+    <div class="list">
+      <ul>
+        {% for serviceman in my_serviceman %}
+         <li><a href="#">{{ serviceman.serviceman }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+  <div class="item-list mt5">
+    <div class="nor">
+      <div class="hd">
+        我的工单
+      </div>
+      <div class="bd">
+        <i class="iconfont icon-xiala2"></i>
+      </div>
+    </div>
+    <div class="list">
+      <ul>
+        {% for order in my_order %}
+         <li><a href="#">{{ order.order }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+  <div class="item-list mt5">
+    <div class="nor">
+      <div class="hd">
+        登出
+      </div>
+      <div class="bd">
+        <i class="iconfont icon-xiala2"></i>
+      </div>
+    </div>
+    <div class="list">
+      <ul>
+        <li><a href="{% url 'logout' %}">登出</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+</div>
+<script>
+  $('html').css('background', '#eee');
+  $('.personal-information .item-list .nor').on('click',function(){
+    $(this).next().slideToggle();
+    $(this).toggleClass('on');
+  })
+</script>
+
+{% endblock %}

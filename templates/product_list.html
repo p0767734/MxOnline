@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% load staticfiles %}
+{% block chanel %}
+<section>
+        <div class="wp">
+            <ul  class="crumbs">
+                <li><a href="{% url 'index' %}">首页</a>></li>
+                <li>产品</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+
+
+{% block product_list %}
+<div class="financing-choice">
+
+{% for product in all_Products %}
+  <div class="ft">
+    <ul>
+      <li>
+        <a href="{% url 'product_detail' product.id %}">
+          <div class="pic">
+            <img src="{{ MEDIA_URL }}{{ product.image }}" alt="">
+          </div>
+          <div class="text">
+            <h3>{{ product.name }}</h3>
+            <h4>{{ product.desc }}</h4>
+            <h5>{{ product.min_price }}元起</h5>
+          </div>
+
+        </a>
+      </li>
+
+
+
+    </ul>
+  </div>
+{% endfor %}
+</div>
+
+{% endblock %}
+
+
+{% block banner1 %}
+
+{% endblock %}

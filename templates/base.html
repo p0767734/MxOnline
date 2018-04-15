@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+{% load staticfiles %}
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+  <link rel="stylesheet" type="text/css" href="  http://at.alicdn.com/t/font_504642_7a6v33turi7o80k9.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    {% block title %}
+
+    {% endblock %}
+  <script src="{% static 'js/jquery-1.7.min.js' %}"></script>
+  <script src="{% static 'js/swiper.jquery.min.js' %}"></script>
+</head>
+
+<body>
+
+<!-- 轮播图 -->
+{% block banner %}
+
+{% endblock %}
+<!-- /轮播图 -->
+<!-- 频道 -->
+{% block chanel %}
+
+{% endblock %}
+<!-- /频道 -->
+
+<!-- 快速投资 -->
+{% block investigate %}
+
+{% endblock %}
+<!-- /快速投资 -->
+
+<!-- 理财精选 -->
+{% block product_list %}
+
+{% endblock %}
+<!-- /理财精选 -->
+
+<!-- 轮播图 -->
+{% block banner1 %}
+
+{% endblock %}
+<!-- /轮播图 -->
+<!-- footer -->
+<div class="footer">
+  <ul>
+    <li class="on">
+      <a href="{% url 'index' %}">
+      <i class="iconfont icon-shouye"></i>
+      <span>首页</span>
+      </a>
+    </li>
+    <li><a href="{% url 'cooperator' %}">
+      <i class="iconfont icon-jigou"></i>
+      <span>合伙人计划</span>
+    </a></li>
+    <li><a href="{% url 'customer' %}">
+      <i class="iconfont icon-faxian-copy"></i>
+      <span>联系客服</span>
+    </a></li>
+    <li><a href="{% url 'user_info' %}">
+      <i class="iconfont icon-LMe"></i>
+      <span>我的</span>
+    </a></li>
+  </ul>
+</div>
+<!-- /footer -->
+
+<script>
+  $('html').css('background', '#f0f0f2');
+    $('html').css('padding-bottom', '54px');
+  var mySwiper0 = new Swiper('#index-banenr-swiper', {
+    paginationClickable: true,
+    pagination: '.banner-swiper-pagination',
+    autoplay: 3000, //可选选项，自动滑动
+  })
+
+  var mySwiper2 = new Swiper('.bottom-banner-swiper', {
+    paginationClickable: false,
+    pagination: '.bottom-banner-swiper-pagination',
+    autoplay: 3000, //可选选项，自动滑动
+  })
+
+  var swiper1 = new Swiper('.financing-choice-swiper', {
+    pagination: '.banner-swiper-pagination13',
+    slidesPerView: 2.8,
+    paginationClickable: true,
+    spaceBetween: 15
+  });
+</script>

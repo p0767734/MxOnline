@@ -1,0 +1,283 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
+<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/TouchSlide.1.1.js' %}"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--头部start-->
+<div class="header">
+  <ul class="clearfix">
+		<li class="logo"><a href="##" title=""><img src="{% static 'images/logo.png' %}" alt="" /></a></li>
+		<li class="menus"><a href="##" title=""><img src="{% static 'images/more.png' %}" alt="" /></a></li>
+		<li class="langues"><em>EN</em></li>
+	</ul>
+</div>
+<!--头部end-->
+
+<!--幻灯片start-->
+<div class="banner" id="demo01">
+  <div class="bd">
+    <ul>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="saerch">
+		<select>
+			<option>长沙</option>
+		</select>
+		<input type="text" value="" placeholder="手机号码" />
+		<input type="button" value="立即代账" />
+	</div>
+</div>
+<script>
+  TouchSlide({ slideCell:"#demo01", titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop"});
+</script>
+<!--幻灯片start-->
+
+<!--财税服务核心start-->
+<div class="cs_main">
+  <ul class="title">
+		<h2>盖谱财税服务核心理念</h2>
+		<p>更专业、更快捷</p>
+	</ul>
+	<ul class="list">
+		<b>零风险</b>
+		<p>五项做账系统风险监控+三重人工核查确保零风险记账</p>
+		<b>专业团队</b>
+		<p>14年行业经验，熟悉各种国内财税政策，为企业合理避税</p>
+		<b>风险预警</b>
+		<p>每月每季度实时财务报告，企业财税风险实时预警，及时提供解决方案</p>
+		<b>高品质服务</b>
+		<p>免费提供上门服务，24小时在线专属财税顾问，为您解决后顾之忧</p>
+		<b>企业服务一条龙</b>
+		<p>企业定制服务，为企业解决财务管理、人力资源、知识产权等全套服务</p>
+	</ul>
+</div>
+<!--财税服务核心end-->
+
+<!--代账服务start-->
+<div class="dz_service">
+	<h2>代理记账服务</h2>
+	<ul>
+		<a href="##" title=""><img src="{% static 'images/img_02.jpg' %}" alt="" /></a>
+	</ul>
+</div>
+<!--代账服务end-->
+
+<!--财务基础服务start-->
+<div class="cfjc_service">
+	<b>财务基础服务</b>
+	<ul>
+		<p>整理原始凭证、记录记账凭证</p>
+		<p>财税专家审核</p>
+		<p>财务管理咨询建议</p>
+		<p>每月纳税申报</p>
+		<p>税务申报表及时推送</p>
+		<p>出具财务报表</p>
+		<p>日常基本财务、税务咨询</p>
+		<p>月度装订凭证</p>
+		<p>年末装订账簿</p>
+		<p>财税风险预警</p>
+	</ul>
+	<b>增值服务免费送</b>
+	<ul>
+		<p>企业工商年检市场价：500元/年</p>
+		<p>国地税报道市场价：500元/次</p>
+		<p>年度企业所得税汇算清缴市场价：500元/年</p>
+		<p>核定残保金</p>
+		<p>法人一证通</p>
+		<p>免费上门服务</p>
+		<p>一对一五星级服务</p>
+	</ul>
+</div>
+<!--财务基础服务end-->
+
+<!--代账流程start-->
+<div class="dz_step">
+	<h2>代理记账流程</h2>
+	<ul>
+	  <li>
+			<div class="m_cell_hd"><img src="{% static 'images/img_03.jpg' %}" alt="" /></div>
+			<div class="m_cell_hd m_cell_primary">
+				<h4>票据收集</h4>
+				<p>专属顾问事实对接，财税专家审核票据</p>
+			</div>
+		</li>
+	  <li>
+			<div class="m_cell_hd"><img src="{% static 'images/img_04.jpg' %}" alt="" /></div>
+			<div class="m_cell_hd m_cell_primary">
+				<h4>会计记账</h4>
+				<p>实时了解做账进度，推送税金确认，合理控制税负</p>
+			</div>
+		</li>
+	  <li>
+			<div class="m_cell_hd"><img src="{% static 'images/img_05.jpg' %}" alt="" /></div>
+			<div class="m_cell_hd m_cell_primary">
+				<h4>会计记账税务审核</h4>
+				<p>五项做账系统风险监控+三重人工核查确保零风险记账</p>
+			</div>
+		</li>
+	  <li>
+			<div class="m_cell_hd"><img src="{% static 'images/img_06.jpg' %}" alt="" /></div>
+			<div class="m_cell_hd m_cell_primary">
+				<h4>纳税申报</h4>
+				<p>专属主办会计进行纳税申报</p>
+			</div>
+		</li>
+	  <li>
+			<div class="m_cell_hd"><img src="{% static 'images/img_07.jpg' %}" alt="" /></div>
+			<div class="m_cell_hd m_cell_primary">
+				<h4>出具财务报告</h4>
+				<p>随时查看企业财务状况，为企业发展提供可靠依据</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--代账流程end-->
+
+<!--多元化财税服务start-->
+<div class="cs_main dyh_service">
+  <ul class="title">
+		<h2>多元化财税服务</h2>
+	</ul>
+	<ul class="list">
+		<b>代理记账</b>
+		<p>小规模/一般纳税人</p>
+		<b>创业必备套餐</b>
+		<p>公司注册+税务登记+代理记账+财务管理+人力资源服务</p>
+		<b>旧账梳理</b>
+		<p>老账旧账梳理、资产核定快递帮您搞定</p>
+		<b>更多财税服务</b>
+		<p>税务咨询、公司年检、税收筹划、审计报告等等</p>
+	</ul>
+</div>
+<!--多元化财税服务end-->
+
+<!--图片位start-->
+<div class="p_img"><a href="##" title=""><img src="{% static 'images/img_08.jpg' %}" alt="" /></a></div>
+<!--图片位end-->
+
+<!--为什么选盖普start-->
+<div class="gp_resion">
+	<h2>为什么选盖谱？</h2>
+	<ul class="clearfix">
+	  <li>
+	    <img src="{% static 'images/img_01.png' %}" alt="" />
+			<b>专业资深团队</b>
+			<p>盖谱数据拥有资深会计师56名，服务团队30名公司总员工120于人，公司实力强大值得信赖</p>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_02.png' %}" alt="" />
+			<b>收费价格透明合理</b>
+			<p>盖谱数据所有收费项目都透明合理，绝无隐形收费、乱收费等行为</p>
+		</li>
+	</ul>
+	<ul class="clearfix">
+	  <li>
+	    <img src="{% static 'images/img_03.png' %}" alt="" />
+			<b>服务不满意可推全款</b>
+			<p>我们的宗旨是全心全意为客户解决问题，让客户省心、放心</p>
+		</li>
+	  <li>
+	    <img src="{% static 'images/img_04.png' %}" alt="" />
+			<b>提供企业一站式服务</b>
+			<p>专业服务企业14年，企业问题我们一站式解决</p>
+		</li>
+	</ul>
+</div>
+<!--为什么选盖普end-->
+
+<!--分类start-->
+<div class="type type01">
+	<b>没错！这些我们都能做</b>
+  <ul class="clearfix">
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_01.jpg' %}" alt="" />
+				<h4>注册服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_02.jpg' %}" alt="" />
+				<h4>财税服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_03.jpg' %}" alt="" />
+				<h4>人力资源</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_04.jpg' %}" alt="" />
+				<h4>知识产权</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_05.jpg' %}" alt="" />
+				<h4>海外业务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_06.jpg' %}" alt="" />
+				<h4>审计服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_07.jpg' %}" alt="" />
+				<h4>增值服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_08.jpg' %}" alt="" />
+				<h4>云系统</h4>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--分类end-->
+
+<!--底部start-->
+<div class="footer footer01">
+  <img src="{% static 'images/logo.png' %}" alt="" />
+	<p>客户热线：400 000 000</p>
+</div>
+<!--底部end-->
+
+<div class="f_nav">
+  <a href="##" title="">
+		<i class="f_01"></i>
+		<p>首页</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_02"></i>
+		<p>合伙人计划</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_03"></i>
+		<p>客服</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_04"></i>
+		<p>我的</p>
+	</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
+<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/TouchSlide.1.1.js' %}"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--头部start-->
+<div class="header">
+  <ul class="clearfix">
+		<li class="logo"><a href="##" title=""><img src="{% static 'images/logo.png' %}" alt="" /></a></li>
+		<li class="menus"><a href="##" title=""><img src="{% static 'images/more.png' %}" alt="" /></a></li>
+		<li class="langues"><em>EN</em></li>
+	</ul>
+</div>
+<!--头部end-->
+
+<!--幻灯片start-->
+<div class="banner" id="demo01">
+  <div class="bd">
+    <ul>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
+		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg '%}" alt="" /></a></li>
+		</ul>
+	</div>
+	<div class="saerch">
+		<select>
+			<option>长沙</option>
+		</select>
+		<input type="text" value="" placeholder="手机号码" />
+		<input type="button" value="立即代账" />
+	</div>
+</div>
+<!--幻灯片start-->
+
+<!--分类start-->
+<div class="type">
+  <ul class="clearfix">
+		<li>
+			<a href="{% url 'company_register' %}" title="">
+			  <img src="{% static 'images/i_01.jpg' %}" alt="" />
+				<h4>注册服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="{% url 'finance' %}" title="">
+			  <img src="{% static 'images/i_02.jpg' %}" alt="" />
+				<h4>财税服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="{% url 'human_resource' %}" title="">
+			  <img src="{% static 'images/i_03.jpg' %}" alt="" />
+				<h4>人力资源</h4>
+			</a>
+		</li>
+		<li>
+			<a href="{% url 'copyright' %}" title="">
+			  <img src="{% static 'images/i_04.jpg' %}" alt="" />
+				<h4>知识产权</h4>
+			</a>
+		</li>
+		<li>
+			<a href="{% url 'oversea_business' %}" title="">
+			  <img src="{% static 'images/i_05.jpg' %}" alt="" />
+				<h4>海外业务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="audit_service" title="">
+			  <img src="{% static 'images/i_06.jpg' %}" alt="" />
+				<h4>审计服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="add_value" title="">
+			  <img src="{% static 'images/i_07.jpg' %}" alt="" />
+				<h4>增值服务</h4>
+			</a>
+		</li>
+		<li>
+			<a href="##" title="">
+			  <img src="{% static 'images/i_08.jpg' %}" alt="" />
+				<h4>云系统</h4>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--分类end-->
+
+<!--公告start-->
+<div class="notice">
+	<ul class="m_cell_hd"><b>通知公告</b></ul>
+	<ul class="m_cell_ft m_cell_primary">
+		<div class="bd">
+		  <ul>
+				<li><a href="##" title="">GAAP盖谱成立于2004年，总部位于新加坡。</a></li>
+				<li><a href="##" title="">GAAP盖谱成立于2004年，总部位于新加坡。</a></li>
+				<li><a href="##" title="">GAAP盖谱成立于2004年，总部位于新加坡。</a></li>
+			</ul>
+		</div>
+	</ul>
+</div>
+<!--公告end-->
+
+<!--咨询start-->
+<div class="index_zx">
+	<ul class="left">
+		<a href="javascript:;" title="">
+		  <img src="{% static 'images/z_01.jpg' %}" alt="" />
+			<b>税务咨询</b>
+			<p>资深专家，更专业、更快捷</p>
+		</a>
+	</ul>
+	<ul class="right">
+	  <li>
+			<a href="javascript:;" title="">
+				<span><i>税务筹划</i>资深专家，更专业、更快捷</span>
+			</a>
+		</li>
+	  <li>
+			<a href="javascript:;" title="">
+				<span><i>海外公司注册</i>资深专家，更专业、更快捷</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<!--咨询end-->
+
+<!--成功案例start-->
+<div class="success">
+  <ul class="title clearfix">
+		<h2>成功案例</h2>
+		<a href="##" title="">更多<b>...</b></a>
+	</ul>
+	<ul class="list">
+	  <li>
+	    <a href="##" title="">
+				<div class="m_cell_hd"><img src="{% static 'images/img_01.jpg' %}" alt="" /></div>
+				<div class="m_cell_ft m_cell_primary">
+					<h4>服务一年累计节省500000成本开支</h4>
+					<span><i>查看更多</i></span>
+				</div>
+	    </a>
+		</li>
+	  <li>
+	    <a href="##" title="">
+				<div class="m_cell_hd"><img src="{% static 'images/img_01.jpg' %}" alt="" /></div>
+				<div class="m_cell_ft m_cell_primary">
+					<h4>服务一年累计节省500000成本开支</h4>
+					<span><i>查看更多</i></span>
+				</div>
+	    </a>
+		</li>
+	  <li>
+	    <a href="##" title="">
+				<div class="m_cell_hd"><img src="{% static 'images/img_01.jpg'%}" alt="" /></div>
+				<div class="m_cell_ft m_cell_primary">
+					<h4>服务一年累计节省500000成本开支</h4>
+					<span><i>查看更多</i></span>
+				</div>
+	    </a>
+		</li>
+	</ul>
+</div>
+<!--成功案例end-->
+
+<!--底部start-->
+<div class="footer">
+  <img src="{% static 'images/logo.png' %}" alt="" />
+	<p>客户热线：400 000 000</p>
+</div>
+<!--底部end-->
+
+<div class="f_nav">
+  <a href="##" title="">
+		<i class="f_01"></i>
+		<p>首页</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_02"></i>
+		<p>合伙人计划</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_03"></i>
+		<p>客服</p>
+	</a>
+  <a href="##" title="">
+		<i class="f_04"></i>
+		<p>我的</p>
+	</a>
+</div>
+
+
+<script>
+TouchSlide({ slideCell:"#demo01", titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop"});
+jQuery(".notice").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true});
+</script>
+</body>
+</html>

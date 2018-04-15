@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!doctype html>
+<html>
+{% block banner %}
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>产品服务详情</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/shoujisc.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/woxiangyao.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/TouchSlide.1.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/foot.js' %}"></script>
+<style>
+.span_border {border:1px solid #000;}
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=88);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 55%;
+    height: 55%;
+    padding: 20px;
+    border: 10px solid orange;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+</style>
+<script type="text/javascript">
+    $(function(){
+        $('.span_border').click(function(){
+            document.getElementById('light').style.display='block';
+        })
+        $('#light').click(function(){
+            document.getElementById('light').style.display='none';
+        })
+    })
+</script>
+</head>
+
+<body>
+
+
+
+    <div class="sjsc-title1">
+    	<h3 class="sjsc-t1l f-l"><a href="JavaScript:"><span><</span>商品详情</a></h3>
+        <a href="#" class="sjsc-t1r f-r"><img src=""></a>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="banner1" id="ban1">
+        <ul class="sy-ul">
+            <li><a href="#"><img src="{{ MEDIA_URL }}{{ product.image }}"></a></li>
+
+        </ul>
+        <ol class="sy-ol">
+        </ol>
+    </div>
+
+    <div class="spxq-info1">
+    	<ul class="spxq-ul1">
+        	<li>
+            	<h3><a href="#">{{ product.name }} <span>:{{ product.desc }}</span></a></h3>
+                <div>
+                	<p class="spxq-p1 f-l">价格：<span>￥{{ product.min_price }}起</span></p>
+                	<p class="spxq-p2 f-r">选择您的私人助理：<span class="span_border">客服小张</span>&nbsp;<span class="span_border">客服小丽</span></p>
+                    <div style="clear:both;"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="spxq-if1">
+        	<p>活动公告：活动期间赠送商品总额5%的资金</p>
+        </div>
+    </div>
+    <div class="spxq-info2">
+    	<ul class="spxq-ul2">
+        	<li class="current"><a href="JavaScript:;">图文详情</a></li>
+        	<li><a href="JavaScript:;">客户评论</a></li>
+            <div style="clear:both;"></div>
+        </ul>
+        <div class="spxq-box">
+        	<div class="spxq-k spxq-k1">
+                {{ product.detail | safe }}
+            </div>
+            <div class="spxq-k spxq-k2" style="display:none;">
+            	{%  for user_comments in relate_courses%}
+                <div class="k2-if">
+                	<p class="k2-top">发布时间：{{ user_comments.add_time }}</p>
+                    <dl class="k2-ft">
+                    	<!--<dt><a href="#"><img src="" /></a></dt>-->
+                        <dd>
+                        	<p class="k2-p1">{{ user_comments.user }}：<span>{{ user_comments.comments | safe }}</span></p>
+                        	<!--<p class="k2-p2">用户ID：133233125（唯一不变的标识）</p>-->
+                            <ul class="k2-ul1">
+                            	<!--<li><a href="#"><img src="images/sjsc33.jpg" /></a></li>-->
+                            	<!--<li><a href="#"><img src="images/sjsc33.jpg" /></a></li>-->
+                            	<!--<li><a href="#"><img src="images/sjsc33.jpg" /></a></li>-->
+                                <!--<div style="clear:both;"></div>-->
+                            </ul>
+                        </dd>
+                        <div style="clear:both;"></div>
+                    </dl>
+                </div>
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li class="on">
+          <a href="{% url 'index' %}">
+          <i class="iconfont icon-shouye"></i>
+          <span>首页</span>
+          </a>
+        </li>
+        <li><a href="{% url 'cooperator' %}">
+          <i class="iconfont icon-jigou"></i>
+          <span>合伙人计划</span>
+        </a></li>
+        <li><a href="{% url 'customer' %}">
+          <i class="iconfont icon-faxian-copy"></i>
+          <span>联系客服</span>
+        </a></li>
+        <li><a href="{% url 'login' %}">
+          <i class="iconfont icon-LMe"></i>
+          <span>我的</span>
+        </a></li>
+      </ul>
+    </div>
+
+<div id="light" style="display:none;" class="white_content">
+
+
+
+</body>
+</html>
+
+<script>
+  $('html').css('background', '#f0f0f2');
+    $('html').css('padding-bottom', '54px');
+  var mySwiper0 = new Swiper('#index-banenr-swiper', {
+    paginationClickable: true,
+    pagination: '.banner-swiper-pagination',
+    autoplay: 3000, //可选选项，自动滑动
+  })
+
+  var mySwiper2 = new Swiper('.bottom-banner-swiper', {
+    paginationClickable: false,
+    pagination: '.bottom-banner-swiper-pagination',
+    autoplay: 3000, //可选选项，自动滑动
+  })
+
+  var swiper1 = new Swiper('.financing-choice-swiper', {
+    pagination: '.banner-swiper-pagination13',
+    slidesPerView: 2.8,
+    paginationClickable: true,
+    spaceBetween: 15
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+.hd-bg-nav{
+background-color:#01a89e !important;
+}
+.hd-bd-nav{
+border-color:#01a89e !important;
+}
+.hd-font-option{
+color:#01a89e !important;
+}
+.hd-bg-adress{
+background-color:#444444 !important;
+}
+.mfont{
+color:#01a89e !important;
+}
+.mfont-on:hover{
+   color:#01a89e !important;
+}
+.mbd-color{
+   border-color:#01a89e !important;
+}
+.mbd-color-on:hover{
+   border-color:#01a89e !important;
+}
+.mbg-color{
+   background-color:#01a89e !important;
+}
+.mbg-color-on:hover{
+   background-color:#01a89e !important;
+}
+.mother-font{
+    color:#fe5e5e !important;
+}
+ .mother-font-on:hover{
+   color:#fe5e5e !important;
+}
+ .mother-bd-color{
+   border-color:#fe5e5e !important;
+}
+ .mother-bd-color-on:hover{
+   border-color:#fe5e5e !important;
+
+}
+ .mother-bg-color{
+    background-color:#fe5e5e !important;
+}
+ .mother-bg-color-on:hover{
+    background-color:#fe5e5e !important;
+}
+.mtab{
+    background-color:#01a89e !important;
+}
+ .mtab:hover{
+    background-color:#01a89e !important;
+}
+ .mtab-on{
+    background-color:#01a89e !important;
+}
+.mprice{
+    color:#fe5e5e !important;
+}
+.mbtn{
+    background-color:#fe5e5e !important;
+}
+ .mbtn:hover{
+    background-color:#f06b6b !important;
+}
+.mtips{
+    color:#048c8c1;
+    background-color:#299c9c !important;
+}
+.minor-bg-color{
+    background-color:null !important;
+}
+
+
+.hback {
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    z-index: 1;
+}

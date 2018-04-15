@@ -50,13 +50,46 @@
                      </div>
                     <div class="ft">
                      <input class="btn btn-green" id="jsEmailRegBtn" type="submit" value="立即注册 " />
-                      <div class="error btns login-form-tips" id="jsLoginTips">{{ msg }}</div>
+{#                        <div class="error btns login-form-tips" id="jsLoginTips">{{ msg }}</div>#}
                     </div>
                 <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
                 {% csrf_token %}
                 </form>
   </div>
 </section>
+
+{#<div class="login-box">#}
+{#   <div class="hd">#}
+{#       <form action="/login/" method="post" autocomplete="off">#}
+{#            <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />#}
+{#           <ul>#}
+{#               <li>#}
+{#                  <i class="iconfont icon-renzhengicondianhua"></i>#}
+{#                  <input name="username"  id="account_l" type="text" placeholder="邮箱/Email">#}
+{#              </li>#}
+{#               <li>#}
+{#                   <i class="iconfont icon-mima"></i>#}
+{#                   <input name="password" id="password_l" type="password" placeholder="密码/Password">#}
+{#               </li>#}
+{#           </ul>#}
+{#           <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />#}
+{#   </div>#}
+{#</div>#}
+{#   <div class="bd">#}
+{#       {% block custom %}#}
+{#     <a href="{% url 'register' %}" class="fl">注册帐号</a>#}
+{#     <a href="#" class="fr">忘记密码</a>#}
+{#       {% endblock %}#}
+{#   </div>#}
+{#   <div class="ft">#}
+{#       {% block content %}#}
+{#     <input class="btn btn-green" id="jsLoginBtn" type="submit" value="登录">#}
+{#       {% endblock %}#}
+{#   </div>#}
+{#</div>#}
+{#    {% csrf_token %}#}
+{#       </form>#}
+
 <script src="/static/js/jquery-1.7.min.js" type="text/javascript"></script>
 <script src="/static/js/unslider.js" type="text/javascript"></script>
 <script src="{% static 'js/validateDialog.js' %}"  type="text/javascript"></script>

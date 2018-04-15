@@ -11,8 +11,7 @@ class ProductionAdmin(object):
     list_display=['name','desc','detail','degree','max_price','min_price','image','index','add_time']
     search_fields=['name','desc','detail','degree','max_price','min_price','image','index']
     list_filter=['name','desc','detail','degree','max_price','min_price','image','index','add_time']
-    style_fields = {'detail':'ueditor'}
-
+    style_fields = {'detail': 'ueditor'}
 
 
 class CustomerCommentsAdmin(object):

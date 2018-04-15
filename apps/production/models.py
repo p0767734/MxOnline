@@ -10,9 +10,9 @@ from DjangoUeditor.models import UEditorField
 class Production(models.Model):
     name=models.CharField(max_length=50, verbose_name=u"产品名称")
     desc=models.CharField(max_length=300, verbose_name=u"业务描述")
-    detail=UEditorField(verbose_name=u"内容",width=600, height=300, imagePath="production/ueditor/",
-                                         filePath="production/ueditor/")
-    # detail = UEditorField(max_length=200, verbose_name=u"内容")
+    # detail=UEditorField(verbose_name=u"内容",width=600, height=300, imagePath="production/ueditor/",
+    #                                      filePath="production/ueditor/", default='', toolbars='full')
+    detail = UEditorField(max_length=200, verbose_name=u"内容")
     degree=models.CharField(choices=(("lw","劳务"),("cw","财务")), max_length=4)
     max_price=models.FloatField(max_length=10,verbose_name=u"最高价格")
     min_price=models.FloatField(max_length=10, verbose_name=u"最低价格")
@@ -40,5 +40,3 @@ class CustomerComments(models.Model):
     class Meta:
         verbose_name=u"客户评论"
         verbose_name_plural=verbose_name
-
-

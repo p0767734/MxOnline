@@ -1,15 +1,12 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
 <!doctype html>
 <html>
-{% block banner %}
+{% load staticfiles %}
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 <title>产品服务详情</title>
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/shoujisc.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
 <script type="text/javascript" src="{% static 'js/jquery-1.7.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/woxiangyao.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/TouchSlide.1.1.js' %}"></script>
@@ -60,7 +57,7 @@
 
 
     <div class="sjsc-title1">
-    	<h3 class="sjsc-t1l f-l"><a href="JavaScript:"><span><</span>商品详情</a></h3>
+    	<h3 class="sjsc-t1l f-l"><a href="JavaScript:;"><span><</span>商品详情</a></h3>
         <a href="#" class="sjsc-t1r f-r"><img src=""></a>
         <div style="clear:both;"></div>
     </div>
@@ -76,7 +73,7 @@
     <div class="spxq-info1">
     	<ul class="spxq-ul1">
         	<li>
-            	<h3><a href="#">{{ product.name }} <span>:{{ product.desc }}</span></a></h3>
+            	<h3><a href="#">{{ product.name }} <span>:唯一的不同，就是处处不同</span></a></h3>
                 <div>
                 	<p class="spxq-p1 f-l">价格：<span>￥{{ product.min_price }}起</span></p>
                 	<p class="spxq-p2 f-r">选择您的私人助理：<span class="span_border">客服小张</span>&nbsp;<span class="span_border">客服小丽</span></p>
@@ -99,7 +96,7 @@
                 {{ product.detail | safe }}
             </div>
             <div class="spxq-k spxq-k2" style="display:none;">
-            	{%  for user_comments in relate_courses%}
+            	{%  for user_comments in all_comments%}
                 <div class="k2-if">
                 	<p class="k2-top">发布时间：{{ user_comments.add_time }}</p>
                     <dl class="k2-ft">
@@ -118,33 +115,136 @@
                     </dl>
                 </div>
                 {% endfor %}
-
+            </div>
+            <div class="spxq-k spxq-k3" style="display:none;">
+            	<div class="k3-if1">
+                	<div class="k3-b1">
+                    	<h3><a href="#">恭喜你募集到了Apple iPhone6s Plus 64G 金色手机一部</a></h3>
+                        <div class="k3b-time">
+                        	<p class="k3b-p1 f-l">我要中大奖</p>
+                        	<p class="k3b-p2 f-r">11.23  20:35</p>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <dl class="k3b-dl1">
+                        	<dt><a href="#"><img src="images/sjsc33.jpg" /></a></dt>
+                            <dd>
+                            	<div class="k3b-pb">
+                                	<p class="k3b-pp">Apple iPhone6s Plus 64G 颜色随机 唯一的不同，就是处处不同</p>
+                            		<p class="k3b-pp">不是每个人都有这么好的人缘的，这次iPhone6s 到手，要感谢我亲爱的朋友们。</p>
+                                </div>
+                                <div class="k3b-tiao">
+                                	<p><a href="JavaScript:;">2<span>∧</span></a></p>
+                                </div>
+                            </dd>
+                            <div style="clear:both;"></div>
+                        </dl>
+                    </div>
+                    <ul class="k3-b2">
+                    	<li>
+                        	<div class="k3b2-if1">
+                                <p class="k3b2-p1 f-l">我要中大奖</p>
+                                <p class="k3b2-p2 f-r">11.23  22:15</p>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <p class="k3b2-p3">我想要，给我来一部，上演帽子戏法 </p>
+                        </li>
+                    	<li>
+                        	<div class="k3b2-if1">
+                                <p class="k3b2-p1 f-l">我要中大奖</p>
+                                <p class="k3b2-p2 f-r">11.23  22:15</p>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <p class="k3b2-p3">我想要，给我来一部，上演帽子戏法 </p>
+                        </li>
+                    </ul>
+                    <button class="k3-b3">我要评论</button>
+                </div>
+                <div class="k3-if1">
+                	<div class="k3-b1">
+                    	<h3><a href="#">恭喜你募集到了Apple iPhone6s Plus 64G 金色手机一部</a></h3>
+                        <div class="k3b-time">
+                        	<p class="k3b-p1 f-l">我要中大奖</p>
+                        	<p class="k3b-p2 f-r">11.23  20:35</p>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <dl class="k3b-dl1">
+                        	<dt><a href="#"><img src="images/sjsc33.jpg" /></a></dt>
+                            <dd>
+                            	<div class="k3b-pb">
+                                	<p class="k3b-pp">Apple iPhone6s Plus 64G 颜色随机 唯一的不同，就是处处不同</p>
+                            		<p class="k3b-pp">不是每个人都有这么好的人缘的，这次iPhone6s 到手，要感谢我亲爱的朋友们。</p>
+                                </div>
+                                <div class="k3b-tiao">
+                                	<p><a href="JavaScript:;">2<span>∧</span></a></p>
+                                </div>
+                            </dd>
+                            <div style="clear:both;"></div>
+                        </dl>
+                    </div>
+                    <ul class="k3-b2">
+                    	<li>
+                        	<div class="k3b2-if1">
+                                <p class="k3b2-p1 f-l">我要中大奖</p>
+                                <p class="k3b2-p2 f-r">11.23  22:15</p>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <p class="k3b2-p3">我想要，给我来一部，上演帽子戏法 </p>
+                        </li>
+                    	<li>
+                        	<div class="k3b2-if1">
+                                <p class="k3b2-p1 f-l">我要中大奖</p>
+                                <p class="k3b2-p2 f-r">11.23  22:15</p>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <p class="k3b2-p3">我想要，给我来一部，上演帽子戏法 </p>
+                        </li>
+                    </ul>
+                    <button class="k3-b3">我要评论</button>
+                </div>
+                <div class="k3-if1">
+                	<div class="k3-b1">
+                    	<h3><a href="#">恭喜你募集到了Apple iPhone6s Plus 64G 金色手机一部</a></h3>
+                        <div class="k3b-time">
+                        	<p class="k3b-p1 f-l">我要中大奖</p>
+                        	<p class="k3b-p2 f-r">11.23  20:35</p>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <dl class="k3b-dl1">
+                        	<dt><a href="#"><img src="images/sjsc33.jpg" /></a></dt>
+                            <dd>
+                            	<div class="k3b-pb">
+                                	<p class="k3b-pp">Apple iPhone6s Plus 64G 颜色随机 唯一的不同，就是处处不同</p>
+                            		<p class="k3b-pp">不是每个人都有这么好的人缘的，这次iPhone6s 到手，要感谢我亲爱的朋友们。</p>
+                                </div>
+                                <div class="k3b-tiao">
+                                	<p><a href="JavaScript:;">2<span>∧</span></a></p>
+                                </div>
+                            </dd>
+                            <div style="clear:both;"></div>
+                        </dl>
+                    </div>
+                    <ul class="k3-b2">
+                    	<li>
+                        	<div class="k3b2-if1">
+                                <p class="k3b2-p1 f-l">我要中大奖</p>
+                                <p class="k3b2-p2 f-r">11.23  22:15</p>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <p class="k3b2-p3">我想要，给我来一部，上演帽子戏法 </p>
+                        </li>
+                    	<li>
+                        	<div class="k3b2-if1">
+                                <p class="k3b2-p1 f-l">我要中大奖</p>
+                                <p class="k3b2-p2 f-r">11.23  22:15</p>
+                                <div style="clear:both;"></div>
+                            </div>
+                            <p class="k3b2-p3">我想要，给我来一部，上演帽子戏法 </p>
+                        </li>
+                    </ul>
+                    <button class="k3-b3">我要评论</button>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="footer">
-      <ul>
-        <li class="on">
-          <a href="{% url 'index' %}">
-          <i class="iconfont icon-shouye"></i>
-          <span>首页</span>
-          </a>
-        </li>
-        <li><a href="{% url 'cooperator' %}">
-          <i class="iconfont icon-jigou"></i>
-          <span>合伙人计划</span>
-        </a></li>
-        <li><a href="{% url 'customer' %}">
-          <i class="iconfont icon-faxian-copy"></i>
-          <span>联系客服</span>
-        </a></li>
-        <li><a href="{% url 'login' %}">
-          <i class="iconfont icon-LMe"></i>
-          <span>我的</span>
-        </a></li>
-      </ul>
     </div>
 
 <div id="light" style="display:none;" class="white_content">
@@ -153,28 +253,3 @@
 
 </body>
 </html>
-
-<script>
-  $('html').css('background', '#f0f0f2');
-    $('html').css('padding-bottom', '54px');
-  var mySwiper0 = new Swiper('#index-banenr-swiper', {
-    paginationClickable: true,
-    pagination: '.banner-swiper-pagination',
-    autoplay: 3000, //可选选项，自动滑动
-  })
-
-  var mySwiper2 = new Swiper('.bottom-banner-swiper', {
-    paginationClickable: false,
-    pagination: '.bottom-banner-swiper-pagination',
-    autoplay: 3000, //可选选项，自动滑动
-  })
-
-  var swiper1 = new Swiper('.financing-choice-swiper', {
-    pagination: '.banner-swiper-pagination13',
-    slidesPerView: 2.8,
-    paginationClickable: true,
-    spaceBetween: 15
-  });
-</script>
-
-{% endblock %}

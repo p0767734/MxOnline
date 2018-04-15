@@ -4,7 +4,6 @@ from datetime import datetime
 
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from DjangoUeditor.models import UEditorField
 
 # Create your models here.
 
@@ -35,34 +34,3 @@ class Banner(models.Model):
 
 
 
-
-class UserMessage(models.Model):
-    user=models.ForeignKey(UserProfile,verbose_name=u"用户")
-    message=UEditorField(verbose_name=u"信息",width=600, height=300, imagePath="production/ueditor/",
-                                         filePath="production/ueditor/")
-    add_time = models.DateTimeField(default=datetime.now, verbose_name=u"消息时间")
-
-    class Meta:
-        verbose_name=u"用户消息"
-        verbose_name_plural=verbose_name
-
-
-
-class MyServiceMan(models.Model):
-    user=models.ForeignKey(UserProfile,verbose_name=u"用户")
-    serviceman=models.CharField(max_length=20,verbose_name=u"私人客服")
-    add_time=models.DateTimeField(default=datetime.now,verbose_name=u"跟单时间")
-
-    class Meta:
-        verbose_name=u"私人客服"
-        verbose_name_plural=verbose_name
-
-
-class MyOrder(models.Model):
-    user=models.ForeignKey(UserProfile,verbose_name=u"用户")
-    order=models.CharField(max_length=100,verbose_name=u"客户订单")
-    add_time=models.DateTimeField(default=datetime.now, verbose_name=u"订单创建时间")
-
-    class Meta:
-        verbose_name=u"客户订单"
-        verbose_name_plural=verbose_name

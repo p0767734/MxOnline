@@ -1,209 +1,271 @@
-<!doctype html>
+{% extends 'base.html' %}
 {% load staticfiles %}
-<html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
-<meta name="format-detection" content="telephone=no" />
-<link type="text/css" href="{% static 'css/style.css'%}" rel="stylesheet" />
-<script type="text/javascript" src="{% static 'js/jquery-1.7.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/jquery.SuperSlide.2.1.1.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/TouchSlide.1.1.js' %}"></script>
-<title>无标题文档</title>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+  <link rel="stylesheet" type="text/css" href="  http://at.alicdn.com/t/font_504642_7a6v33turi7o80k9.css">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    {% block title %}
+  <title>index</title>
+    {% endblock %}
+  <script src="{% static 'js/jquery-1.7.min.js' %}"></script>
+    <script src="{% static 'js/swiper.jquery.min.js' %}"></script>
 </head>
 
 <body>
-<!--头部start-->
-<div class="header">
-  <ul class="clearfix">
-		<li class="logo"><a href="##" title=""><img src="{% static 'images/logo.png' %}" alt="" /></a></li>
-		<li class="menus"><a href="##" title=""><img src="{% static 'images/more.png' %}" alt="" /></a></li>
-		<li class="langues"><em>EN</em></li>
-	</ul>
-</div>
-<!--头部end-->
 
-<!--幻灯片start-->
-<div class="banner" id="demo01">
+
+<!-- 轮播图 -->
+{% block banner %}
+<div class="index-banner">
+  <div class="swiper-container " id="index-banenr-swiper">
+    <div class="swiper-wrapper">
+        {% for banner in all_banners %}
+      <div class="swiper-slide"><a href="#"><img src="{{ MEDIA_URL }}{{ banner.image }}" alt=""></a></div>
+{#      <div class="swiper-slide"><a href="#"><img src="{% static 'images/banner01.jpg' %}" alt=""></a></div>#}
+{#      <div class="swiper-slide"><a href="#"><img src="{% static 'images/banner01.jpg' %}" alt=""></a></div>#}
+        {% endfor %}
+    </div>
+    <div class="swiper-pagination banner-swiper-pagination"></div>
+  </div>
+</div>
+{% endblock %}
+<!-- /轮播图 -->
+<!-- 频道 -->
+{% block chanel %}
+<div class="channel-nav">
+  <ul class="cf">
+    <li>
+      <a href="#">
+        <div class="table-cell-auto">
+          <h3>注册服务</h3>
+          <p></p>
+        </div>
+        <div class="table-cell">
+          <div class="pic">
+            <img src="{% static 'images/demo.jpeg' %}" alt="">
+          </div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="table-cell-auto">
+          <h3>财会税务</h3>
+          <p></p>
+        </div>
+        <div class="table-cell">
+          <div class="pic">
+            <img src="{% static 'images/demo.jpeg' %}" alt="">
+          </div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="table-cell-auto">
+          <h3>增值服务</h3>
+          <p></p>
+        </div>
+        <div class="table-cell">
+          <div class="pic">
+            <img src="{% static 'images/demo.jpeg' %}" alt="">
+          </div>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="table-cell-auto">
+          <h3>人力资源</h3>
+          <p></p>
+        </div>
+        <div class="table-cell">
+          <div class="pic">
+            <img src="{% static 'images/demo.jpeg' %}" alt="">
+          </div>
+        </div>
+      </a>
+    </li>
+      <li>
+      <a href="#">
+        <div class="table-cell-auto">
+          <h3>知识产权</h3>
+          <p></p>
+        </div>
+        <div class="table-cell">
+          <div class="pic">
+            <img src="{% static 'images/demo.jpeg' %}" alt="">
+          </div>
+        </div>
+      </a>
+    </li>
+      <li>
+      <a href="#">
+        <div class="table-cell-auto">
+          <h3>海外业务</h3>
+          <p></p>
+        </div>
+        <div class="table-cell">
+          <div class="pic">
+            <img src="{% static 'images/demo.jpeg' %}" alt="">
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endblock %}
+<!-- /频道 -->
+
+<!-- 热门推荐 -->
+{% block investigate %}
+<div class="fast-venturing">
+  <div class="headline-h2">
+    <h2>热门推荐</h2>
+  </div>
+
   <div class="bd">
+    <div class="swiper-container financing-choice-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#">
+            <b>活期</b>
+            <span>3.9%</span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <b>活期</b>
+            <span>3.9%</span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <b>活期</b>
+            <span>3.9%</span>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#">
+            <b>活期</b>
+            <span>3.9%</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+<!-- /热门推荐 -->
+
+<!-- 产品业务 -->
+{% block product_list %}
+<div class="financing-choice">
+  <div class="headline-h2">
+    <h2>产品服务</h2>
+  </div>
+  <div class="bd">
+    <a href="#">
+      <h3>累积服务企业</h3>
+      <h4>3000 <span>家中小企业</span></h4>
+      <h5>满意度100%</h5>
+      <h6><span>平均收费</span><i>|</i><span>1000元-3000元</span></h6>
+    </a>
+  </div>
+  <div class="ft">
     <ul>
-		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
-		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg' %}" alt="" /></a></li>
-		  <li><a href="##" title=""><img src="{% static 'images/banner.jpg '%}" alt="" /></a></li>
-		</ul>
-	</div>
-	<div class="saerch">
-		<select>
-			<option>长沙</option>
-		</select>
-		<input type="text" value="" placeholder="手机号码" />
-		<input type="button" value="立即代账" />
-	</div>
-</div>
-<!--幻灯片start-->
+     {% for product in all_Products %}
+       <li>
+        <a href="{% url 'product_detail' product.id %}">
+          <div class="pic">
+            <img src="{{ MEDIA_URL }}{{ product.image }}" alt="">
+          </div>
+          <div class="text">
+            <h3>{{ product.name }}</h3>
+            <h4>{{ product.desc }}</h4>
+            <h5>{{ product.min_price }}元起</h5>
+          </div>
 
-<!--分类start-->
-<div class="type">
-  <ul class="clearfix">
-		<li>
-			<a href="{% url 'company_register' %}" title="">
-			  <img src="{% static 'images/i_01.jpg' %}" alt="" />
-				<h4>注册服务</h4>
-			</a>
-		</li>
-		<li>
-			<a href="{% url 'finance' %}" title="">
-			  <img src="{% static 'images/i_02.jpg' %}" alt="" />
-				<h4>财税服务</h4>
-			</a>
-		</li>
-		<li>
-			<a href="{% url 'human_resource' %}" title="">
-			  <img src="{% static 'images/i_03.jpg' %}" alt="" />
-				<h4>人力资源</h4>
-			</a>
-		</li>
-		<li>
-			<a href="{% url 'copyright' %}" title="">
-			  <img src="{% static 'images/i_04.jpg' %}" alt="" />
-				<h4>知识产权</h4>
-			</a>
-		</li>
-		<li>
-			<a href="{% url 'oversea_business' %}" title="">
-			  <img src="{% static 'images/i_05.jpg' %}" alt="" />
-				<h4>海外业务</h4>
-			</a>
-		</li>
-		<li>
-			<a href="audit_service" title="">
-			  <img src="{% static 'images/i_06.jpg' %}" alt="" />
-				<h4>审计服务</h4>
-			</a>
-		</li>
-		<li>
-			<a href="add_value" title="">
-			  <img src="{% static 'images/i_07.jpg' %}" alt="" />
-				<h4>增值服务</h4>
-			</a>
-		</li>
-		<li>
-			<a href="##" title="">
-			  <img src="{% static 'images/i_08.jpg' %}" alt="" />
-				<h4>云系统</h4>
-			</a>
-		</li>
-	</ul>
+        </a>
+       </li>
+     {% endfor %}
+     </ul>
+  </div>
 </div>
-<!--分类end-->
+   <div class="headline-h2">
+     <a href="{% url 'product_list' %}">
+            <h2>更多产品</h2>
+     </a>
+  </div>
+{#{% for product in all_Products.object %}#}
+{#  <div class="ft">#}
+{#    <ul>#}
+{#      <li>#}
+{#        <a href="{% url 'product_list' %}">#}
+{#          <div class="pic">#}
+{#            <img src="{{ MEDIA_URL }}{{ product.image }}" alt="">#}
+{#          </div>#}
+{#          <div class="text">#}
+{#            <h3>{{ product.name }}</h3>#}
+{#            <h4>{{ product.desc }}</h4>#}
+{#            <h5>{{ product.min_price }}元起</h5>#}
+{#          </div>#}
+{##}
+{#        </a>#}
+{#      </li>#}
+{#    </ul>#}
+{#  </div>#}
+{#{% endfor %}#}
 
-<!--公告start-->
-<div class="notice">
-	<ul class="m_cell_hd"><b>通知公告</b></ul>
-	<ul class="m_cell_ft m_cell_primary">
-		<div class="bd">
-		  <ul>
-				<li><a href="##" title="">GAAP盖谱成立于2004年，总部位于新加坡。</a></li>
-				<li><a href="##" title="">GAAP盖谱成立于2004年，总部位于新加坡。</a></li>
-				<li><a href="##" title="">GAAP盖谱成立于2004年，总部位于新加坡。</a></li>
-			</ul>
-		</div>
-	</ul>
+
+{% endblock %}
+<!-- /产品业务 -->
+
+<!-- 轮播图 -->
+{% block banner1 %}
+<div class="bottom-banner">
+  <div class="swiper-container bottom-banner-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><a href="#"><img src="{% static 'images/demo03.png' %}" alt=""></a></div>
+      <div class="swiper-slide"><a href="#"><img src="{% static 'images/demo03.png' %}" alt=""></a></div>
+      <div class="swiper-slide"><a href="#"><img src="{% static 'images/demo03.png' %}" alt=""></a></div>
+    </div>
+    <!-- <div class="swiper-pagination bottom-banner-swiper-pagination"></div> -->
+  </div>
 </div>
-<!--公告end-->
+{% endblock %}
+<!-- /轮播图 -->
 
-<!--咨询start-->
-<div class="index_zx">
-	<ul class="left">
-		<a href="javascript:;" title="">
-		  <img src="{% static 'images/z_01.jpg' %}" alt="" />
-			<b>税务咨询</b>
-			<p>资深专家，更专业、更快捷</p>
-		</a>
-	</ul>
-	<ul class="right">
-	  <li>
-			<a href="javascript:;" title="">
-				<span><i>税务筹划</i>资深专家，更专业、更快捷</span>
-			</a>
-		</li>
-	  <li>
-			<a href="javascript:;" title="">
-				<span><i>海外公司注册</i>资深专家，更专业、更快捷</span>
-			</a>
-		</li>
-	</ul>
-</div>
-<!--咨询end-->
-
-<!--成功案例start-->
-<div class="success">
-  <ul class="title clearfix">
-		<h2>成功案例</h2>
-		<a href="##" title="">更多<b>...</b></a>
-	</ul>
-	<ul class="list">
-	  <li>
-	    <a href="##" title="">
-				<div class="m_cell_hd"><img src="{% static 'images/img_01.jpg' %}" alt="" /></div>
-				<div class="m_cell_ft m_cell_primary">
-					<h4>服务一年累计节省500000成本开支</h4>
-					<span><i>查看更多</i></span>
-				</div>
-	    </a>
-		</li>
-	  <li>
-	    <a href="##" title="">
-				<div class="m_cell_hd"><img src="{% static 'images/img_01.jpg' %}" alt="" /></div>
-				<div class="m_cell_ft m_cell_primary">
-					<h4>服务一年累计节省500000成本开支</h4>
-					<span><i>查看更多</i></span>
-				</div>
-	    </a>
-		</li>
-	  <li>
-	    <a href="##" title="">
-				<div class="m_cell_hd"><img src="{% static 'images/img_01.jpg'%}" alt="" /></div>
-				<div class="m_cell_ft m_cell_primary">
-					<h4>服务一年累计节省500000成本开支</h4>
-					<span><i>查看更多</i></span>
-				</div>
-	    </a>
-		</li>
-	</ul>
-</div>
-<!--成功案例end-->
-
-<!--底部start-->
-<div class="footer">
-  <img src="{% static 'images/logo.png' %}" alt="" />
-	<p>客户热线：400 000 000</p>
-</div>
-<!--底部end-->
-
-<div class="f_nav">
-  <a href="##" title="">
-		<i class="f_01"></i>
-		<p>首页</p>
-	</a>
-  <a href="##" title="">
-		<i class="f_02"></i>
-		<p>合伙人计划</p>
-	</a>
-  <a href="##" title="">
-		<i class="f_03"></i>
-		<p>客服</p>
-	</a>
-  <a href="##" title="">
-		<i class="f_04"></i>
-		<p>我的</p>
-	</a>
-</div>
-
+<!-- /footer -->
 
 <script>
-TouchSlide({ slideCell:"#demo01", titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop"});
-jQuery(".notice").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true});
+  $('html').css('background', '#f0f0f2');
+    $('html').css('padding-bottom', '54px');
+  var mySwiper0 = new Swiper('#index-banenr-swiper', {
+    paginationClickable: true,
+    pagination: '.banner-swiper-pagination',
+    autoplay: 3000, //可选选项，自动滑动
+  })
+
+  var mySwiper2 = new Swiper('.bottom-banner-swiper', {
+    paginationClickable: false,
+    pagination: '.bottom-banner-swiper-pagination',
+    autoplay: 3000, //可选选项，自动滑动
+  })
+
+  var swiper1 = new Swiper('.financing-choice-swiper', {
+    pagination: '.banner-swiper-pagination13',
+    slidesPerView: 2.8,
+    paginationClickable: true,
+    spaceBetween: 15
+  });
 </script>
-</body>
-</html>

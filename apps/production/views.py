@@ -22,40 +22,6 @@ class ProductListView(View):
             "current_nav":current_nav
         })
 
-class FinanceView(View):
-    def get(self,request):
-        return render(request,"finance_service.html",{})
-
-
-class Company_registerView(View):
-    def get(self,request):
-        return render(request, "company_register.html")
-
-
-class CopyrightView(View):
-    def get(self,request):
-        return render(request, "copyright_service.html")
-
-class Human_resourceView(View):
-    def get(self, request):
-        return render(request,"human_resource.html")
-
-class Oversea_businesseView(View):
-    def get(self,request):
-        return render(request, "oversea_business.html")
-
-
-class Add_valueView(View):
-    def get(self,request):
-        return render(request, "add_value.html")
-
-class Audit_serviceView(View):
-    def get(self,request):
-        return render(request, "audit_service.html")
-
-
-
-
 
 class IndexView(View):
     def get(self,request):
@@ -70,9 +36,10 @@ class IndexView(View):
 class ProductDetailView(View):
     def get(self, request, product_id):
         product=Production.objects.get(id=int(product_id))
-        relate_courses = CustomerComments.objects.filter(id__in=product_id)
+        all_comments=CustomerComments.objects.all()
         return render(request, "product_detail.html",{
             "product":product,
-            "relate_courses":relate_courses,
+            "all_comments":all_comments,
+
         })
 

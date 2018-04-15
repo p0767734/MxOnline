@@ -1,3 +1,4 @@
-# -*- coding: utf-8 -*-
-__author__ = 'bobby'
-__date__ = '2016/10/30 22:11'
+#_*_coding:utf-8 _*_
+
+_author_ = 'bobby'
+_date_ = '2017/11/20 21:07'
